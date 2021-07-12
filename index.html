@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Resume Builder</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+	<script>
+		let handleUpload = (ev) => {
+			ev.preventDefault();
+			document.getElementById("profile-image").src=URL.createObjectURL(ev.target.files[0])
+		}
+	</script>
+</head>
+
+<body>
+	<div class="agileits-main">
+		<form >
+			<h3>Personal Details</h3>
+			<div class="personal-details">
+				<div class="profile-image">
+					<img id="profile-image" src="profile.png " width="100" height="100">
+					<br>
+					<br>
+					<input id="image-upload" type="file" onchange="handleUpload(event)">
+				</div>
+				<div>
+					<ul>
+						<li class="text">Name  :  </li>
+						<li><input name="name" type="text"></li>
+					</ul>
+					<ul>
+						<li class="text">Mobile  :  </li>
+						<li><input name="mobile" type="text"></li>
+					</ul>
+					<ul>
+						<li class="text">E-mail  :  </li>
+						<li><input name="E-mail" type="text"></li>
+					</ul>
+				</div>
+			</div>
+
+			<h3>Educational Qualifications</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Institution</th>
+						<th>Course</th>
+						<th>Passout Year</th>
+						<th>CGPA</th>
+					</tr>
+				</thead>
+				<tbody>
+					<datalist id="cgpalist">
+						<option value="1"></option>
+						<option value="2"></option>
+						<option value="3"></option>
+						<option value="4"></option>
+						<option value="5"></option>
+						<option value="6"></option>
+						<option value="7"></option>
+						<option value="8"></option>
+						<option value="9"></option>
+						<option value="10"></option>
+					</datalist>
+				  	<tr>
+						<td><input type="text"></input></td>
+						<td><input type="text"></input></td>
+						<td><input type="text"></input></td>
+						<td><input type="select" list="cgpalist"></input></td>
+				  	</tr>
+				  	<tr>
+						<td><input type="text"></input></td>
+						<td><input type="text"></input></td>
+						<td><input type="text"></input></td>
+						<td><input type="select" list="cgpalist"></input></td>
+					</tr>
+					<tr>
+						<td><input type="text"></input></td>
+						<td><input type="text"></input></td>
+						<td><input type="text"></input></td>
+						<td><input type="select" list="cgpalist"></input></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Skill Set</h3>
+                <ul id="skill-list">
+                    <li><input type="text" name="" value=""></li>
+										<li><input type="text" name="" value=""></li>
+										<li><input type="text" name="" value=""></li>
+										<li><input type="text" name="" value=""></li>
+										<li><input type="text" name="" value=""></li>
+										<li><input type="text" name="" value=""></li>
+										<li>Others</li><textarea class="large-text"></textarea>
+
+
+
+                </ul>
+
+			<h3>Work Experience</h3>
+			<textarea class="large-text"></textarea>
+
+			<h3>Projects and Internships</h3>
+			<textarea class="large-text"></textarea>
+
+			<div class="clear"></div>
+			<script type="text/javascript">
+			function myFunction() {
+					alert("Your resume is ready...!");
+		}
+				
+			</script>
+			<button onclick="myFunction()">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
